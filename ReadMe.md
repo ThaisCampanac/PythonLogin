@@ -5,6 +5,7 @@
 1. PySimpleGUI
 2. Webbrowser
 3. PyAutoGUI
+4. Pyinstaller
 
 *Background*
 ------------
