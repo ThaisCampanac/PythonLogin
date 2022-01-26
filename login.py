@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 import webbrowser
+import pyautogui
 
 #make sure path to firefox is created
 firefox_path="C:\\Program Files\\Mozilla Firefox\\firefox.exe"
@@ -12,6 +13,8 @@ layout = [[sg.Column(loginInfo, element_justification='c'), sg.Column(websitesIn
 # Create the window
 window = sg.Window("Python Login", layout, margins=(100,20))
 
+#make a warning screen
+
 # Create an event loop
 while True:
     event, values = window.read()
@@ -19,9 +22,11 @@ while True:
     if event == sg.WIN_CLOSED:
         break
     if event == 'Login to Elearning' or event == 'Login to All':
-        
         webbrowser.get('firefox').open('elearning.utdallas.edu/')
+        pyautogui.press('enter')
     if event == 'Login to Galaxy' or event == 'Login to All':
         webbrowser.get('firefox').open('https://www.utdallas.edu/galaxy/')
+        pyautogui.doubleClick((500, 700), interval=3)
+        pyautogui.press('enter')
 
 window.close()
