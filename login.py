@@ -22,11 +22,26 @@ while True:
     if event == sg.WIN_CLOSED:
         break
     if event == 'Login to Elearning' or event == 'Login to All':
-        webbrowser.get('firefox').open('elearning.utdallas.edu/')
+        #webbrowser.get('firefox').open('elearning.utdallas.edu/')
+        #pyautogui.press('enter')
+        #pyautogui.sleep(10)
+        #insert information
+        #pyautogui.press('tab')
+        #pyautogui.hotkey('ctrl', 'a')
+        #pyautogui.press('delete')
+        #username
+        print(values[0])
+
+        #pyautogui.press('tab')
+        #pyautogui.hotkey('ctrl', 'a')
+        #pyautogui.press('delete')
+        #password
+        print(values[1])
         pyautogui.press('enter')
+    #needs an interval
     if event == 'Login to Galaxy' or event == 'Login to All':
         webbrowser.get('firefox').open('https://www.utdallas.edu/galaxy/')
-        pyautogui.doubleClick((500, 700), interval=3)
+        pyautogui.doubleClick((500, 700))
         pyautogui.press('enter')
 
 window.close()
